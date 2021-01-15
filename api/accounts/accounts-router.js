@@ -14,7 +14,7 @@ router.get('/', (req,res) => {
 })
 
 // GET /api/accounts/:id
-router.get('/:id', (req,res => {
+router.get('/:id', (req,res) => {
     db('accounts')
         .where({ id: req.params.id })
         .first()
@@ -29,7 +29,7 @@ router.get('/:id', (req,res => {
             res.status(500).json({ message: 'error' })
         })
 
-}))
+})
 
 // POST /api/accounts
 router.post('/', (req,res) => {
